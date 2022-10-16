@@ -1,0 +1,10 @@
+version: "3"
+services:
+  jupyter:
+    build: .
+    working_dir: '/root/'
+    volumes:
+      - .:/root/
+    command: jupyter lab --NotebookApp.token=''
+    ports:
+      - "8888:8888"
